@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "841192760290",
+    "project_id": "courseapp-7ea2f",
+    "storage_bucket": "courseapp-7ea2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841192760290:android:08f5beb2af01732be5cfbb",
+        "android_client_info": {
+          "package_name": "com.dbestech.course_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXDRItMZiKoopSsp9Q7Ig007mhgub6P0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
