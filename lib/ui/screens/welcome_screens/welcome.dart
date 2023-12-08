@@ -1,6 +1,7 @@
-import 'package:course_app/ui/screens/welcome/bloc/welcome_blocs.dart';
-import 'package:course_app/ui/screens/welcome/bloc/welcome_events.dart';
-import 'package:course_app/ui/screens/welcome/bloc/welcome_states.dart';
+import 'package:course_app/common/values/colors.dart';
+import 'package:course_app/ui/screens/welcome_screens/bloc/welcome_blocs.dart';
+import 'package:course_app/ui/screens/welcome_screens/bloc/welcome_events.dart';
+import 'package:course_app/ui/screens/welcome_screens/bloc/welcome_states.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -67,8 +68,8 @@ class _WelcomeState extends State<Welcome> {
                       position: state.page,
                       dotsCount: 3,
                       decorator: DotsDecorator(
-                        color: Colors.grey,
-                        activeColor: Colors.blue,
+                        color: AppColors.primaryThirdElementText,
+                        activeColor: AppColors.primaryElement,
                         size: const Size.square(8.0),
                         activeSize: const Size(18.0, 8.0),
                         activeShape: RoundedRectangleBorder(
@@ -102,7 +103,7 @@ class _WelcomeState extends State<Welcome> {
           child: Text(
             title,
             style: TextStyle(
-              color: Colors.black,
+              color: AppColors.primaryText,
               fontSize: 24.sp,
               fontWeight: FontWeight.normal,
             ),
@@ -114,7 +115,7 @@ class _WelcomeState extends State<Welcome> {
           child: Text(
             subTitle,
             style: TextStyle(
-              color: Colors.black.withOpacity(0.5),
+              color: AppColors.primarySecondaryElementText,
               fontSize: 14.sp,
               fontWeight: FontWeight.normal,
             ),
@@ -129,9 +130,8 @@ class _WelcomeState extends State<Welcome> {
                 curve: Curves.easeIn,
               );
             } else {
-              // Navigator.of(context)
-              //     .push(MaterialPageRoute(builder: (context) => const Home()));
-              Navigator.of(context).pushNamedAndRemoveUntil("home", (route) => false);
+              Navigator.of(context)
+                  .pushNamedAndRemoveUntil("sign_in", (route) => false);
             }
           },
           child: Container(
@@ -139,7 +139,7 @@ class _WelcomeState extends State<Welcome> {
             width: 345.w,
             height: 50.h,
             decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: AppColors.primaryElement,
                 borderRadius: BorderRadius.all(
                   Radius.circular(15.w),
                 ),
